@@ -1,25 +1,45 @@
+
+html {
+  @include breakpoint(xs) {font-size:0.25rem;}//6px
+  @include breakpoint(sm) {font-size:0.5rem;  }//9px
+  @include breakpoint(md) {font-size:0.625rem;}//10px
+  @include breakpoint(lg) {font-size:0.75rem; }//12px
+  @include breakpoint(xl) {font-size:0.875rem;}//14px
+}
+
 .home__main {
-  @include flex($gap:0);
-  height:100vh;
   background-color:#0d1117;
+  height:100vh;
 
-  .main__header {
-    color:#5d6772;
-    font-weight:bold;
-    font-size:8rem;
-    .header {
-      &__title {
-        display:inline;
-        span {
-          padding:0 1rem;
-          color:#a96060;
-        }
+  @include flex();
+  @include transition(all .3s ease);
+
+  .main {
+    &__content {
+      font-size:6rem;
+
+      @include flex();
+    }
+
+    &__text {
+      cursor:pointer;
+      font-size:5rem;
+      font-weight:bold;
+      color:#4d5762;
+
+      span {
+        line-height:0;
+        color:#d9a060;
       }
 
-      &__tag {
-        padding:0 .4rem;
-        color:#a96060;
+      &:hover {
+        color:#354752;
+        text-shadow:0 0 10px #2022;
       }
+    }
+
+    &__tag {
+      color:#d96060;
     }
   }
 }

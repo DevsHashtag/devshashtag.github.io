@@ -24,30 +24,6 @@ html {
   letter-spacing: 0 !important;
 }
 
-@font-face {
-  font-family: Samim;
-  src: url("/assets/fonts/Samim.eot");
-  src: url("/assets/fonts/Samim.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Samim.woff2") format("woff2"), url("/assets/fonts/Samim.woff") format("woff"), url("/assets/fonts/Samim.ttf") format("truetype");
-  font-weight: normal;
-}
-@font-face {
-  font-family: Samim;
-  src: url("/assets/fonts/Samim-Bold.eot");
-  src: url("/assets/fonts/Samim-Bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Samim-Bold.woff2") format("woff2"), url("/assets/fonts/Samim-Bold.woff") format("woff"), url("/assets/fonts/Samim-Bold.ttf") format("truetype");
-  font-weight: bold;
-}
-@font-face {
-  font-family: Samim;
-  src: url("/assets/fonts/Samim-Medium.eot");
-  src: url("/assets/fonts/Samim-Medium.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Samim-Medium.woff2") format("woff2"), url("/assets/fonts/Samim-Medium.woff") format("woff"), url("/assets/fonts/Samim-Medium.ttf") format("truetype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: Tanha;
-  src: url("/assets/fonts/Tanha-FD.eot");
-  src: url("/assets/fonts/Tanha-FD.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/Tanha-FD.woff2") format("woff2"), url("/assets/fonts/Tanha-FD.woff") format("woff"), url("/assets/fonts/Tanha-FD.ttf") format("truetype");
-  font-weight: normal;
-}
 body {
   font-family: Samim, Arial, sans-serif;
 }
@@ -98,31 +74,72 @@ a {
   outline: none !important;
 }
 
+@media (max-width: 576px) {
+  html {
+    font-size: 0.25rem;
+  }
+}
+@media (min-width: 576px) {
+  html {
+    font-size: 0.5rem;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 0.625rem;
+  }
+}
+@media (min-width: 992px) {
+  html {
+    font-size: 0.75rem;
+  }
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 0.875rem;
+  }
+}
+
 .home__main {
+  background-color: #0d1117;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
   gap: 0;
-  height: 100vh;
-  background-color: #0d1117;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.home__main .main__header {
-  color: #5d6772;
+.home__main .main__content {
+  font-size: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.home__main .main__text {
+  cursor: pointer;
+  font-size: 5rem;
   font-weight: bold;
-  font-size: 8rem;
+  color: #4d5762;
 }
-.home__main .main__header .header__title {
-  display: inline;
+.home__main .main__text span {
+  line-height: 0;
+  color: #d9a060;
 }
-.home__main .main__header .header__title span {
-  padding: 0 1rem;
-  color: #a96060;
+.home__main .main__text:hover {
+  color: #354752;
+  text-shadow: 0 0 10px #2022;
 }
-.home__main .main__header .header__tag {
-  padding: 0 0.4rem;
-  color: #a96060;
+.home__main .main__tag {
+  color: #d96060;
 }
 
 /*# sourceMappingURL=styles.css.map */
