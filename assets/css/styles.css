@@ -109,14 +109,13 @@ a {
   align-items: center;
   flex-wrap: nowrap;
   gap: 0;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  transition: all 0.1s ease;
 }
-.home__main .main__content {
-  font-size: 6rem;
+.home__main .main__content a {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -124,22 +123,38 @@ a {
   flex-wrap: nowrap;
   gap: 0;
 }
+.home__main .main__content a:hover .main__text {
+  font-size: 8rem;
+  color: #fcd8a1;
+}
+.home__main .main__content a:hover .main__tag {
+  font-size: 6rem;
+  color: #d96060;
+}
 .home__main .main__text {
   cursor: pointer;
   font-size: 5rem;
   font-weight: bold;
   color: #4d5762;
+  text-transform: uppercase;
+  -webkit-transition: color 0.8s, font-size 0.8s;
+  -moz-transition: color 0.8s, font-size 0.8s;
+  -ms-transition: color 0.8s, font-size 0.8s;
+  -o-transition: color 0.8s, font-size 0.8s;
+  transition: color 0.8s, font-size 0.8s;
 }
 .home__main .main__text span {
   line-height: 0;
   color: #d9a060;
 }
-.home__main .main__text:hover {
-  color: #354752;
-  text-shadow: 0 0 10px #2022;
-}
 .home__main .main__tag {
-  color: #d96060;
+  -webkit-transition: color 0.8s, font-size 0.8s;
+  -moz-transition: color 0.8s, font-size 0.8s;
+  -ms-transition: color 0.8s, font-size 0.8s;
+  -o-transition: color 0.8s, font-size 0.8s;
+  transition: color 0.8s, font-size 0.8s;
+  font-size: 6rem;
+  color: #d9a060;
 }
 
 /*# sourceMappingURL=styles.css.map */

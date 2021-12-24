@@ -1,45 +1,51 @@
 
 html {
   @include breakpoint(xs) {font-size:0.25rem;}//6px
-  @include breakpoint(sm) {font-size:0.5rem;  }//9px
+@include breakpoint(sm) {font-size:0.5rem;  }//9px
   @include breakpoint(md) {font-size:0.625rem;}//10px
-  @include breakpoint(lg) {font-size:0.75rem; }//12px
+@include breakpoint(lg) {font-size:0.75rem; }//12px
   @include breakpoint(xl) {font-size:0.875rem;}//14px
 }
 
 .home__main {
-  background-color:#0d1117;
+  background-color:$home-main-bg;
   height:100vh;
 
   @include flex();
-  @include transition(all .3s ease);
+  @include transition(all .1s ease);
 
   .main {
-    &__content {
-      font-size:6rem;
+    &__content { 
+      a {
+        @include flex();
 
-      @include flex();
+        &:hover .main {
+          &__text { font-size:8rem; color:$main-text-hover-fg; }
+
+          &__tag { font-size:6rem; color:$main-tag-hover-fg; }
+        }
+      }
     }
 
     &__text {
       cursor:pointer;
       font-size:5rem;
       font-weight:bold;
-      color:#4d5762;
+      color:$main-text-fg;
+      text-transform: uppercase;
+      @include transition(color .8s ,font-size .8s);
 
       span {
         line-height:0;
-        color:#d9a060;
+        color:$main-text-span-fg;
       }
 
-      &:hover {
-        color:#354752;
-        text-shadow:0 0 10px #2022;
-      }
     }
 
     &__tag {
-      color:#d96060;
+      @include transition(color .8s ,font-size .8s);
+      font-size:6rem;
+      color:$main-tag-fg;
     }
   }
 }
