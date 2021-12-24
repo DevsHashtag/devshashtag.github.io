@@ -1,0 +1,26 @@
+.home__main {
+  @include flex($gap:0);
+  height:100vh;
+  background-color:#0d1117;
+
+  .main__header {
+    color:#5d6772;
+    font-weight:bold;
+    font-size:8rem;
+    .header {
+      &__title {
+        display:inline;
+        span {
+          padding:0 1rem;
+          color:#a96060;
+        }
+      }
+
+      &__tag {
+        padding:0 .4rem;
+        color:#a96060;
+      }
+    }
+  }
+}
+

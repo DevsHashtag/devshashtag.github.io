@@ -98,4 +98,31 @@ a {
   outline: none !important;
 }
 
+.home__main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  height: 100vh;
+  background-color: #0d1117;
+}
+.home__main .main__header {
+  color: #5d6772;
+  font-weight: bold;
+  font-size: 8rem;
+}
+.home__main .main__header .header__title {
+  display: inline;
+}
+.home__main .main__header .header__title span {
+  padding: 0 1rem;
+  color: #a96060;
+}
+.home__main .main__header .header__tag {
+  padding: 0 0.4rem;
+  color: #a96060;
+}
+
 /*# sourceMappingURL=styles.css.map */
